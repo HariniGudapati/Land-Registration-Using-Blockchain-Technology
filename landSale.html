@@ -1,0 +1,140 @@
+{% extends 'users/userbase.html'%}
+{%load static%}
+{%block contents%}
+
+<!-- container -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h3 class="section-title">Sale Land </h3>
+            {{hash}}
+            <p>
+            <form action="{%url 'UserSaleLand'%}" class="form-light mt-20" role="form" method="post">
+             {% csrf_token %}
+                <div class="form-group">
+                    <label>Seller Name</label>
+                    <input type="text" name="sellerName" class="form-control" placeholder="Your name" required>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Seller Email</label>
+                            <input type="email" name="sellerEmail" class="form-control" placeholder="Email address"
+                                   required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Seller Mobile</label>
+                            <input type="text" name="sellerMobile" class="form-control" placeholder="Phone number"
+                                   required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Seller Aadhar</label>
+                            <input type="test" name="sellerAadhar" class="form-control" placeholder="Aadhar card"
+                                   required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Seller Pan Card</label>
+                            <input type="text" name="sellerPan" class="form-control" placeholder="PAN number" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Seller Address</label>
+                    <textarea name="sellerAddress" class="form-control" id="message"
+                              placeholder="Write you message here..."
+                              style="height:100px;"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Buyer Name</label>
+                    <input type="text" name="buyerName" class="form-control" placeholder="Your name" required>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Buyer Email</label>
+                            <input type="email" name="buyerEmail" class="form-control" placeholder="Email address"
+                                   required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Buyer Mobile</label>
+                            <input type="text" name="buyerMobile" class="form-control" placeholder="Phone number"
+                                   required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Buyer Aadhar</label>
+                            <input type="test" name="buyerAadhar" class="form-control" placeholder="Aadhar card"
+                                   required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Buyer Pan Card</label>
+                            <input type="text" name="buyerPan" class="form-control" placeholder="PAN number" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Buyer Address</label>
+                    <textarea name="buyerAddress" class="form-control" id="message"
+                              placeholder="Write you message here..."
+                              style="height:100px;"></textarea>
+                </div>
+				<h3 class="section-title">Proerty Informaton</h3>
+				<table>
+					<tr>
+						<td>Length</td><td><input type="text" name="length" required></td>
+					</tr>
+					<tr>
+						<td>Width</td><td><input type="text" name="width" required></td>
+					</tr>
+					<tr>
+						<td>East Side </td><td><input type="text" name="eastSide" required></td>
+					</tr>
+					<tr>
+						<td>West Side</td><td><input type="text" name="westSide" required></td>
+					</tr>
+					<tr>
+						<td>North Side</td><td><input type="text" name="northSide" required></td>
+					</tr>
+					<tr>
+						<td>South Side</td><td><input type="text" name="southSide" required></td>
+					</tr>
+
+				</table>
+			 <div class="form-group">
+                    <label>Property Address</label>
+                    <textarea name="propertyAddress" class="form-control" id="message"
+                              placeholder="Write you message here..."
+                              style="height:100px;"></textarea>
+                </div>
+                <button type="submit" class="btn btn-two">Submit</button>
+                <p><br/></p>
+
+
+
+            </form>
+
+
+        </div>
+
+    </div>
+</div>
+<!-- /container -->
+
+
+{%endblock%}

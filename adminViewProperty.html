@@ -1,0 +1,55 @@
+{% extends 'admins/adminbase.html'%}
+{%load static%}
+{%block contents%}
+
+<section class="we-do">
+    <div class="container">
+        <div class="we-do-details">
+            <div class="section-header text-center">
+                <h2>View Registered Users</h2>
+                <p>
+                <table class="table table-bordered bg-light text-dark">
+                    <thead>
+                    <tr style="color:red;font-weight:bold;">
+                        <th>S.No</th>
+                        <th>Seller Name</th>
+                        <th>Seller Email ID</th>
+                        <th>Seller PAN</th>
+                        <th>Buyer Name</th>
+                        <th>buyer Email</th>
+                        <th>Buyer Address</th>
+                        <th>Property Length</th>
+                        <th>Property Width</th>
+                        <th>Property Address</th>
+                        <th>Status</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for i in data %}
+                    <tr style="color: Green">
+                        <td>{{forloop.counter}}</td>
+                        <td>{{i.sellerName}}</td>
+                        <td>{{i.sellerEmail}}</td>
+                        <td>{{i.sellerPan}}</td>
+                        <td>{{i.buyerName}}</td>
+                        <td>{{i.buyerEmail}}</td>
+                        <td>{{i.buyerAddress}}</td>
+                        <td>{{i.length}}</td>
+                        <td>{{i.width}}</td>
+                        <td>{{i.propertyAddress}}</td>
+                        <td>{{i.status }}</td>
+
+                    </tr>
+                    {% endfor %}
+
+                    </tbody>
+                </table>
+                </p>
+            </div><!--/.section-header-->
+
+        </div><!--/.we-do-details-->
+    </div><!--/.container-->
+</section><!--/.we-do-->
+
+
+{%endblock%}
